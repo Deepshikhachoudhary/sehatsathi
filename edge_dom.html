@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login / Register - SehatSaathi AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  body { background: #131315; color: #e4e2e4; font-family: Inter, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .auth-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 48px; width: 100%; max-width: 420px; backdrop-filter: blur(12px); }
+  .auth-title { font-size: 28px; font-weight: 700; color: #74f5ff; margin-bottom: 8px; }
+  .auth-subtitle { color: #c5c6cd; margin-bottom: 32px; font-size: 14px; }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: 13px; color: #c5c6cd; margin-bottom: 8px; }
+  .form-input { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 16px; color: #e4e2e4; font-size: 15px; outline: none; box-sizing: border-box; transition: border-color 0.2s; }
+  .form-input:focus { border-color: #74f5ff; }
+  .btn-primary { width: 100%; background: linear-gradient(135deg, #74f5ff, #4fdbc8); color: #131315; font-weight: 700; border: none; border-radius: 50px; padding: 14px; font-size: 15px; cursor: pointer; margin-top: 8px; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .toggle-link { text-align: center; margin-top: 20px; color: #c5c6cd; font-size: 14px; }
+  .toggle-link a { color: #74f5ff; cursor: pointer; text-decoration: none; }
+  .back-link { display: flex; align-items: center; gap: 8px; margin-bottom: 28px; color: #c5c6cd; cursor: pointer; font-size: 14px; text-decoration: none; }
+  .back-link:hover { color: #74f5ff; }
+</style>
+</head>
+<body>
+<div class="auth-card">
+  <a class="back-link" href="../index.html"><span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Back to Home</a>
+  <div class="auth-title">SehatSaathi AI</div>
+  <div class="auth-subtitle" id="auth-subtitle">Enter your name to start a Guest Session</div>
+  <div id="login-form">
+    <div class="form-group">
+      <label class="form-label">Full Name</label>
+      <input class="form-input" type="text" id="guest-name" placeholder="Enter your name" required="">
+    </div>
+    <button class="btn-primary" onclick="handleContinueAsGuest()">Continue as Guest</button>
+  </div>
+</div>
+<script>
+  if (localStorage.getItem('sehatsathi_guest_mode') === 'true') {
+      window.location.href = '../index.html';
+  }
+
+  function handleContinueAsGuest() {
+      const nameInput = document.getElementById('guest-name');
+      const name = nameInput ? nameInput.value.trim() : '';
+      if (!name) {
+          alert('Please enter your name to continue.');
+          return;
+      }
+
+      let guestId = localStorage.getItem('sehatsathi_guest_id');
+      if (!guestId) {
+          const randHex = Math.floor(100000 + Math.random() * 900000).toString(16).toUpperCase().substring(0, 6);
+          guestId = `SSA-${randHex}`;
+          localStorage.setItem('sehatsathi_guest_id', guestId);
+      }
+      localStorage.setItem('sehatsathi_guest_mode', 'true');
+      localStorage.setItem('sehatsathi_guest_name', name);
+      localStorage.removeItem('sehatsathi_welcome_toast_shown');
+      window.location.href = '../index.html';
+  }
+</script>
+
+
+</body></html>

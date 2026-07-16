@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SehatSaathi AI - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#71f8e4",
+                      "background": "#131315",
+                      "on-secondary": "#00363a",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "inverse-primary": "#515f78",
+                      "on-surface-variant": "#c5c6cd",
+                      "secondary-container": "#00f1fe",
+                      "error-container": "#93000a",
+                      "primary-container": "#0a192f",
+                      "on-primary-fixed-variant": "#39475f",
+                      "secondary": "#ddfcff",
+                      "on-secondary-fixed": "#002022",
+                      "on-primary-container": "#74829d",
+                      "tertiary": "#4fdbc8",
+                      "error": "#ffb4ab",
+                      "surface-container-highest": "#343536",
+                      "secondary-fixed-dim": "#00dbe7",
+                      "tertiary-fixed-dim": "#4fdbc8",
+                      "tertiary-container": "#001d19",
+                      "surface-container-lowest": "#0e0e10",
+                      "surface-tint": "#b9c7e4",
+                      "on-tertiary-fixed": "#00201c",
+                      "on-surface": "#e4e2e4",
+                      "surface-variant": "#343536",
+                      "on-tertiary-container": "#009283",
+                      "surface-bright": "#39393b",
+                      "surface-container-high": "#2a2a2c",
+                      "on-tertiary": "#003731",
+                      "surface-container": "#1f1f21",
+                      "on-primary-fixed": "#0d1c32",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "secondary-fixed": "#74f5ff",
+                      "primary-fixed": "#d6e3ff",
+                      "inverse-surface": "#e4e2e4",
+                      "on-error-container": "#ffdad6",
+                      "on-background": "#e4e2e4",
+                      "surface-dim": "#131315",
+                      "inverse-on-surface": "#303032",
+                      "on-tertiary-fixed-variant": "#005048",
+                      "on-error": "#690005",
+                      "outline-variant": "#44474d",
+                      "surface": "#131315",
+                      "on-primary": "#233148",
+                      "on-secondary-container": "#006a70",
+                      "surface-container-low": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "xs": "4px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "sm": "12px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "title-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                      "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                      "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+              }
+            }
+          }
+        };
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="font-body-md text-body-md min-h-screen bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container flex flex-col md:flex-row">
+    
+    <!-- Mobile Navbar Shell -->
+    <header id="navbar-container"></header>
+
+    <!-- Side Navigation Shell -->
+    <aside id="sidebar-container"></aside>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-1 w-full md:pl-72 pt-24 md:pt-12 pb-16 flex flex-col min-h-screen">
+        <div class="w-full max-w-[1400px] mx-auto px-4 md:px-12 flex flex-col gap-12 flex-1">
+        <!-- Hero Section -->
+        <section class="relative w-full rounded-2xl glass-panel overflow-hidden h-auto py-8 md:py-10 flex flex-col lg:flex-row items-center p-5 md:p-6 gap-6">
+            <!-- Hero Content -->
+            <div class="flex-1 flex flex-col gap-4 z-10 w-full lg:max-w-[42%]">
+                <div class="flex flex-col gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/10 border border-secondary-container/30 text-secondary-container text-[11px] font-semibold w-fit tracking-wider">
+                        <span class="material-symbols-outlined text-[12px] text-secondary-container animate-pulse">auto_awesome</span>
+                        AI Powered Family Healthcare Platform
+                    </span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-none mt-1">
+                        SehatSaathi <span class="text-gradient-cyan">AI</span>
+                    </h1>
+                    <h2 class="text-base md:text-lg font-semibold text-secondary-container/90">
+                        Healthcare Awareness for Every Family
+                    </h2>
+                </div>
+                <p class="text-sm text-on-surface-variant max-w-xl leading-relaxed">
+                    A community-driven digital health companion providing simple, multilingual health guidance, first-aid awareness, emergency resources, and health tracking.
+                </p>
+                <div class="flex flex-wrap gap-2.5 mt-2">
+                    <a class="btn-gradient px-5 py-3 rounded-xl font-label-md text-label-md font-bold transition-all flex items-center justify-center gap-2 min-h-[48px] hover:scale-[1.02]" href="pages/health-library.html">
+                        Start Health Guide
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </a>
+                    <a class="glass-panel px-5 py-3 rounded-xl font-label-md text-label-md text-white transition-all flex items-center justify-center gap-2 min-h-[48px] hover:bg-white/5 border border-white/10" href="pages/ai-assistant.html">
+                        <span class="material-symbols-outlined text-[16px] text-secondary-container">mic</span>
+                        Talk to AI
+                    </a>
+                    <a class="bg-error/15 border border-error/35 text-error px-5 py-3 rounded-xl font-label-md text-label-md transition-all flex items-center justify-center gap-2 min-h-[48px] hover:bg-error/25 hover:border-error/55" href="pages/emergency.html">
+                        <span class="material-symbols-outlined text-[16px]">emergency</span>
+                        Emergency Help
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Interactive Dashboard (Right Side) -->
+            <div class="flex-1 w-full lg:max-w-[58%] z-10 bg-[#0e1116]/80 rounded-2xl border border-white/5 p-4 relative overflow-hidden backdrop-blur-md">
+                <!-- Background visual glow -->
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-tertiary/10 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <!-- Dashboard Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 relative z-10 text-[11px]">
+                    
+                    <!-- Widget 1: Today's Health Score -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col justify-between cursor-pointer group">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-on-surface-variant font-medium">Health Score</span>
+                            <span class="material-symbols-outlined text-secondary-container text-xs">trending_up</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="relative flex items-center justify-center w-11 h-11 shrink-0">
+                                <svg class="w-full h-full transform -rotate-90">
+                                    <circle cx="22" cy="22" r="18" class="stroke-white/10" stroke-width="2.5" fill="transparent"/>
+                                    <circle cx="22" cy="22" r="18" class="stroke-secondary-container" stroke-width="2.5" fill="transparent" stroke-dasharray="113" stroke-dashoffset="17"/>
+                                </svg>
+                                <span class="absolute text-[11px] font-bold text-white">85</span>
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-white block">Excellent</span>
+                                <span class="text-[9px] text-on-surface-variant block">Optimal condition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 2: BMI Summary -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col justify-between cursor-pointer">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-on-surface-variant font-medium">BMI Summary</span>
+                            <span class="material-symbols-outlined text-secondary-fixed text-xs">calculate</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="bg-secondary-fixed/15 p-1 rounded-lg text-secondary-fixed font-bold text-center w-10 h-10 flex flex-col justify-center shrink-0">
+                                <span class="text-[11px] leading-none">22.4</span>
+                                <span class="text-[7px] mt-0.5 uppercase tracking-wide">BMI</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold text-white block">Normal Weight</span>
+                                <span class="text-[9px] text-on-surface-variant block">174cm | 68kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 3: Emergency SOS Quick Action -->
+                    <div id="hero-sos-card" class="hero-widget bg-[#93000a]/10 border border-[#93000a]/20 p-3 rounded-xl flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex items-center justify-between mb-1 relative z-10">
+                            <span class="text-error font-bold uppercase tracking-wider text-[9px]">Emergency SOS</span>
+                            <span class="material-symbols-outlined text-error text-[12px] animate-pulse">sos</span>
+                        </div>
+                        <div class="relative z-10 flex flex-col gap-1.5">
+                            <p class="text-[9px] text-error/80 leading-tight">Instant access to helpline</p>
+                            <button id="hero-trigger-sos-btn" class="w-full bg-error hover:bg-error/90 text-white py-1 rounded-lg font-bold transition-all active:scale-95 flex items-center justify-center gap-1 text-[9px] shadow-[0_0_10px_rgba(255,77,77,0.3)]">
+                                <span class="material-symbols-outlined text-[10px] animate-bounce">call</span>
+                                <span id="hero-sos-text">Trigger SOS</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Widget 4: Digital Family Health Card -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col md:col-span-2">
+                        <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-white/5">
+                            <span class="text-on-surface-variant font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[12px] text-secondary-container">id_card</span>
+                                Family Health Card
+                            </span>
+                            <div class="flex gap-1" id="hero-card-tabs">
+                                <button class="hero-tab-active px-2 py-0.5 rounded text-[8px] font-semibold transition-all" data-member="father">Father</button>
+                                <button class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-on-surface-variant text-[8px] transition-all" data-member="self">Self</button>
+                                <button class="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-on-surface-variant text-[8px] transition-all" data-member="mother">Mother</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <!-- QR Code mini preview -->
+                            <div class="w-12 h-12 bg-white p-1 rounded-lg shrink-0 flex items-center justify-center shadow-[0_0_8px_rgba(0,241,254,0.15)]">
+                                <img id="hero-card-qr" class="w-full h-full mix-blend-multiply" src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=SehatSaathi-Father-Card" alt="QR">
+                            </div>
+                            <div class="flex-grow grid grid-cols-2 gap-x-2 gap-y-0.5">
+                                <div>
+                                    <span class="text-[7px] text-on-surface-variant block uppercase tracking-wider">Name</span>
+                                    <span class="text-[9px] text-white font-semibold block truncate" id="hero-card-name">Robert Doe</span>
+                                </div>
+                                <div>
+                                    <span class="text-[7px] text-on-surface-variant block uppercase tracking-wider">Age & Blood</span>
+                                    <span class="text-[9px] text-white font-semibold block" id="hero-card-age-blood">58 yrs | O+</span>
+                                </div>
+                                <div class="col-span-2">
+                                    <span class="text-[7px] text-on-surface-variant block uppercase tracking-wider">Conditions</span>
+                                    <span class="text-[9px] text-error font-semibold block truncate" id="hero-card-conditions">Hypertension, Diabetes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 5: Water Intake Progress -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-on-surface-variant font-medium">Water Intake</span>
+                            <span class="material-symbols-outlined text-tertiary text-xs">local_drink</span>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-white font-bold"><span id="hero-water-val">0.0</span> / 2.5 L</span>
+                                <span class="text-on-surface-variant text-[9px]" id="hero-water-pct">0%</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mb-2">
+                                <div class="bg-tertiary h-full transition-all duration-300" id="hero-water-bar" style="width: 0%;"></div>
+                            </div>
+                            <button id="hero-add-water-btn" class="w-full bg-tertiary/10 hover:bg-tertiary/20 text-tertiary border border-tertiary/20 py-0.5 rounded-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-95 text-[9px]">
+                                <span class="material-symbols-outlined text-[10px]">add</span> Add Glass
+                            </button>
+                            <div id="hero-water-toast" class="opacity-0 transition-opacity duration-300 text-[8px] text-center text-tertiary font-medium mt-1">Water intake updated.</div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 8: Sleep Tracker -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-on-surface-variant font-medium">Sleep Tracker</span>
+                            <span class="material-symbols-outlined text-primary-fixed-dim text-xs">bedtime</span>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-white font-bold"><span id="hero-sleep-val">No data</span></span>
+                                <span class="text-on-surface-variant text-[9px]" id="hero-sleep-status">Poor</span>
+                            </div>
+                            <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mb-2">
+                                <div class="bg-primary-fixed-dim h-full transition-all duration-300" id="hero-sleep-bar" style="width: 0%;"></div>
+                            </div>
+                            <button onclick="window.location.href='pages/health-tools.html'" class="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 py-0.5 rounded-md font-semibold flex items-center justify-center gap-1 transition-all active:scale-95 text-[9px]">
+                                <span class="material-symbols-outlined text-[10px]">visibility</span> View Tools
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Widget 6: AI Assistant Preview -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col md:col-span-2 justify-between">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-on-surface-variant font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[12px] text-secondary-container animate-pulse">auto_awesome</span>
+                                SehatSaathi AI Assistant
+                            </span>
+                            <span class="text-[8px] bg-secondary-container/10 text-secondary-container px-1 rounded font-semibold flex items-center gap-0.5">
+                                <span class="w-1 h-1 rounded-full bg-secondary-container animate-pulse"></span> Online
+                            </span>
+                        </div>
+                        <div class="bg-black/30 rounded-lg p-2 flex flex-col gap-1.5 min-h-[64px] justify-between">
+                            <!-- AI Bubble -->
+                            <div class="flex flex-col gap-0.5">
+                                <div class="text-[8px] text-secondary-container font-semibold flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[9px]">robot</span> SehatSaathi AI
+                                </div>
+                                <p class="text-[9px] text-white leading-tight font-mono" id="hero-ai-bubble">
+                                    "Ask me any health related query. Click a prompt below to try."
+                                </p>
+                            </div>
+                            <!-- Quick Prompts -->
+                            <div class="flex gap-1 overflow-x-auto hide-scroll pt-1 border-t border-white/5">
+                                <button class="hero-ai-prompt-btn px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-on-surface-variant text-[8px] hover:border-secondary-container/30 transition-all whitespace-nowrap" data-prompt="bp">High BP tips</button>
+                                <button class="hero-ai-prompt-btn px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-on-surface-variant text-[8px] hover:border-secondary-container/30 transition-all whitespace-nowrap" data-prompt="fever">Fever first aid</button>
+                                <button class="hero-ai-prompt-btn px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-on-surface-variant text-[8px] hover:border-secondary-container/30 transition-all whitespace-nowrap" data-prompt="diet">Heart healthy diet</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 7: Upcoming Medicine Reminder -->
+                    <div class="hero-widget bg-surface-container/40 border border-white/5 p-3 rounded-xl flex flex-col justify-between">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-on-surface-variant font-medium">Next Medicine</span>
+                            <span class="material-symbols-outlined text-error text-xs">pill</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="bg-error/15 p-1.5 rounded-lg text-error shrink-0">
+                                <span class="material-symbols-outlined text-[14px]">notifications_active</span>
+                            </div>
+                            <div class="min-w-0">
+                                <span class="text-[10px] font-bold text-white block truncate">Metformin 500mg</span>
+                                <span class="text-[8px] text-on-surface-variant block">2:00 PM (In 2h)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid (Bento style) -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter py-6">
+            <div class="glass-panel p-md rounded-2xl flex flex-col items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-secondary-container/10 flex items-center justify-center border border-secondary-container/20">
+                    <span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+                </div>
+                <div>
+                    <div class="font-display-lg text-display-lg text-white">35</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">Families Surveyed</div>
+                </div>
+            </div>
+            <div class="glass-panel p-md rounded-2xl flex flex-col items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-tertiary-fixed/10 flex items-center justify-center border border-tertiary-fixed/20">
+                    <span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">groups</span>
+                </div>
+                <div>
+                    <div class="font-display-lg text-display-lg text-white">70</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">People Reached</div>
+                </div>
+            </div>
+            <div class="glass-panel p-md rounded-2xl flex flex-col items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+                </div>
+                <div>
+                    <div class="font-display-lg text-display-lg text-white">8</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">Health Topics Covered</div>
+                </div>
+            </div>
+            <div class="glass-panel p-md rounded-2xl flex flex-col items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center border border-secondary/20">
+                    <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">campaign</span>
+                </div>
+                <div>
+                    <div class="font-display-lg text-display-lg text-white">1</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">Awareness Campaign</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer container -->
+        <footer id="footer-container"></footer>
+        </div>
+    </main>
+
+    <!-- Translation Dictionary -->
+    <script src="assets/js/translations.js?v=2"></script>
+    <!-- Global Javascript -->
+    <script src="assets/js/script.js?v=2"></script>
+
+    <!-- Hero Dashboard Interaction -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Sleep and Water Intake Dashboard Trackers (Synced with LocalStorage via sehatSathiDB)
+            const addWaterBtn = document.getElementById('hero-add-water-btn');
+            const waterVal = document.getElementById('hero-water-val');
+            const waterPct = document.getElementById('hero-water-pct');
+            const waterBar = document.getElementById('hero-water-bar');
+            const waterToast = document.getElementById('hero-water-toast');
+            
+            const sleepVal = document.getElementById('hero-sleep-val');
+            const sleepStatus = document.getElementById('hero-sleep-status');
+            const sleepBar = document.getElementById('hero-sleep-bar');
+
+            // Load from database
+            const metrics = window.sehatSathiDB ? window.sehatSathiDB.getHealthData() : {};
+            
+            let rawWater = metrics.waterIntake;
+            if (rawWater === null || rawWater === undefined) {
+                rawWater = "0";
+            }
+            let currentWater = parseFloat(rawWater);
+            if (isNaN(currentWater)) {
+                currentWater = 0.0;
+            }
+
+            let rawSleep = metrics.sleepHours;
+            if (rawSleep === null || rawSleep === undefined) {
+                rawSleep = "0";
+            }
+            const parsedSleep = parseFloat(rawSleep);
+            const sleepHours = isNaN(parsedSleep) ? 0.0 : parsedSleep;
+            const waterGoal = 2.5;
+
+            // Draw Water Tracker
+            const drawWater = (animate = false) => {
+                if (waterVal && waterPct && waterBar) {
+                    waterVal.textContent = currentWater.toFixed(1);
+                    const pct = Math.min(Math.round((currentWater / waterGoal) * 100), 100);
+                    waterPct.textContent = pct + '%';
+                    waterBar.style.width = pct + '%';
+                    
+                    if (animate && waterVal) {
+                        waterVal.classList.add('scale-110', 'text-secondary-fixed');
+                        setTimeout(() => {
+                            waterVal.classList.remove('scale-110', 'text-secondary-fixed');
+                        }, 250);
+                    }
+                }
+            };
+
+            // Draw Sleep Tracker
+            const drawSleep = () => {
+                if (sleepVal && sleepStatus && sleepBar) {
+                    if (sleepHours <= 0) {
+                        sleepVal.textContent = "No data";
+                        sleepStatus.textContent = "Poor";
+                        sleepBar.style.width = "0%";
+                        return;
+                    }
+
+                    const h = Math.floor(sleepHours);
+                    const m = Math.round((sleepHours - h) * 60);
+                    sleepVal.textContent = `${h}h ${m}m`;
+
+                    let status = "Healthy";
+                    if (sleepHours < 5) status = "Poor";
+                    else if (sleepHours >= 5 && sleepHours < 7) status = "Average";
+                    else if (sleepHours >= 7 && sleepHours <= 9) status = "Healthy";
+                    else if (sleepHours > 9) status = "Oversleep";
+
+                    sleepStatus.textContent = status;
+                    const sleepPct = Math.min(Math.round((sleepHours / 8) * 100), 100);
+                    sleepBar.style.width = sleepPct + '%';
+                }
+            };
+
+            // Initialize trackers
+            drawWater();
+            drawSleep();
+
+            if (addWaterBtn) {
+                addWaterBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentWater += 0.25; // add 250ml (0.25L)
+                    drawWater(true);
+                    
+                    if (window.sehatSathiDB) {
+                        window.sehatSathiDB.saveHealthData({ waterIntake: currentWater.toFixed(2) });
+                    }
+
+                    // Show success toast
+                    if (waterToast) {
+                        waterToast.classList.remove('opacity-0');
+                        waterToast.classList.add('opacity-100');
+                        setTimeout(() => {
+                            waterToast.classList.remove('opacity-100');
+                            waterToast.classList.add('opacity-0');
+                        }, 1500);
+                    }
+                });
+            }
+
+            // 2. Family Health Card Tabs
+            const cardTabs = document.querySelectorAll('#hero-card-tabs button');
+            const cardName = document.getElementById('hero-card-name');
+            const cardAgeBlood = document.getElementById('hero-card-age-blood');
+            const cardConditions = document.getElementById('hero-card-conditions');
+            const cardQr = document.getElementById('hero-card-qr');
+            
+            const memberData = {
+                father: {
+                    name: 'Robert Doe',
+                    ageBlood: '58 yrs | O+',
+                    conditions: 'Hypertension, Diabetes',
+                    qr: 'https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=SehatSaathi-Father-Card'
+                },
+                self: {
+                    name: 'John Doe',
+                    ageBlood: '28 yrs | A+',
+                    conditions: 'None (Healthy)',
+                    qr: 'https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=SehatSaathi-Self-Card'
+                },
+                mother: {
+                    name: 'Mary Doe',
+                    ageBlood: '54 yrs | B+',
+                    conditions: 'Asthma',
+                    qr: 'https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=SehatSaathi-Mother-Card'
+                }
+            };
+
+            cardTabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const member = tab.getAttribute('data-member');
+                    if (!memberData[member]) return;
+                    
+                    // Toggle active classes
+                    cardTabs.forEach(t => {
+                        t.classList.remove('hero-tab-active', 'font-semibold');
+                        t.classList.add('bg-white/5', 'border', 'border-white/10', 'text-on-surface-variant');
+                    });
+                    tab.classList.add('hero-tab-active', 'font-semibold');
+                    tab.classList.remove('bg-white/5', 'border', 'border-white/10', 'text-on-surface-variant');
+                    
+                    // Update info
+                    cardName.textContent = memberData[member].name;
+                    cardAgeBlood.textContent = memberData[member].ageBlood;
+                    cardConditions.textContent = memberData[member].conditions;
+                    cardQr.src = memberData[member].qr;
+                });
+            });
+
+            // 3. AI Assistant Prompts
+            const promptButtons = document.querySelectorAll('.hero-ai-prompt-btn');
+            const aiBubble = document.getElementById('hero-ai-bubble');
+            
+            const promptAnswers = {
+                bp: '"AI: Lower sodium to <1500mg, monitor pressure daily, walk 30 mins, and consult your physician."',
+                fever: '"AI: Rest, stay hydrated, use cold compress, take paracetamol (if >101°F), and monitor breathing."',
+                diet: '"AI: Focus on leafy greens, berries, fish, nuts, and olive oil. Limit processed foods and salt."'
+            };
+
+            promptButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const promptKey = btn.getAttribute('data-prompt');
+                    if (promptAnswers[promptKey]) {
+                        aiBubble.textContent = promptAnswers[promptKey];
+                        
+                        promptButtons.forEach(b => {
+                            b.classList.remove('border-secondary-container/50', 'text-secondary-container');
+                        });
+                        btn.classList.add('border-secondary-container/50', 'text-secondary-container');
+                    }
+                });
+            });
+
+            // 4. Emergency SOS Trigger
+            const sosBtn = document.getElementById('hero-trigger-sos-btn');
+            const sosCard = document.getElementById('hero-sos-card');
+            const sosText = document.getElementById('hero-sos-text');
+            
+            if (sosBtn && sosCard && sosText) {
+                let sosTimeout = null;
+                sosBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (sosCard.classList.contains('sos-active')) {
+                        // Deactivate
+                        clearTimeout(sosTimeout);
+                        sosCard.classList.remove('sos-active');
+                        sosText.textContent = 'Trigger SOS';
+                    } else {
+                        // Activate
+                        sosCard.classList.add('sos-active');
+                        sosText.textContent = 'SOS ACTIVE...';
+                        
+                        // Reset after 4 seconds
+                        sosTimeout = setTimeout(() => {
+                            sosCard.classList.remove('sos-active');
+                            sosText.textContent = 'Trigger SOS';
+                        }, 4000);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

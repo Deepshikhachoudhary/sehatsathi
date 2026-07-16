@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+.DS_Store
+*.log
+.vercel/
+.firebase/
+.idea/
+.vscode/settings.json
+sehatsathi_deployment.zip
+sehatsathi_AI.tar.gz
+sehatsaathi_AI.tar.gz
+stitch_extracted/
